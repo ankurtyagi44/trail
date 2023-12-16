@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>
+            this is the first page
+        </title>
+    </head>
+    <body> 
+        {% include 'navbar.html' %}
+         
+        <form action="/index/" method="POST">
+            {% csrf_token %}
+            <input type="radio" name="check">
+            <button >Send</button>
+        </form>
+        
+        <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Corporis modi magnam atque earum ullam ducimus necessitatibus cumque 
+            quia fugiat perspiciatis repellat, asperiores officiis quos.
+             Asperiores labore deserunt cupiditate corporis neque.
+
+        </p>
+        <button>Contact us</button>
+        <h1> the name of the channel is {{ch}}</h1>
+        <hr>
+        <h1>Student data</h1>
+        <h2>Student name :{{student.student_name}}</h2>
+        <h2>Student college :{{student.student_college}}</h2>
+        <h2> Student city :{{student.student_city}}</h2>
+
+        
+    </body>
+</html>
